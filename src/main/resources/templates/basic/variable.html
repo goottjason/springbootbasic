@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
-    <h1>타임리프 기본</h1>
+<h1>타임리프 기본</h1>
 
-    <!-- -->
-    <div th:text="${user.username}"></div>
+<!-- -->
+<div th:text="${user.username}"></div>
 
-    <!-- 어레이리스트 받아오기 -->
-    <ul>
-        <li th:text="${users[0].username}"></li>
-        <li th:text="${users[1].username}"></li>
-        <li th:text="${users[1].getUsername()}"></li>
-    </ul>
+<!-- 어레이리스트 받아오기 -->
+<ul>
+  <li th:text="${users[0].username}"></li>
+  <li th:text="${users[1].username}"></li>
+  <li th:text="${users[1].getUsername()}"></li>
+</ul>
 
-    <!-- 해시맵 받아오기 -->
-    <ul>
-        <li th:text="${userMap['choi'].username}"></li>
-        <li th:text="${userMap['choi']['age']}"></li>
-        <li th:text="${userMap['choi'].getUsername}"></li>
-    </ul>
+<!-- 해시맵 받아오기 -->
+<ul>
+  <li th:text="${userMap['choi'].username}"></li>
+  <li th:text="${userMap['choi']['age']}"></li>
+  <li th:text="${userMap['choi'].getUsername}"></li>
+</ul>
 
-    <!-- 지역변수 -->
-    <!-- 선언한 태그 내에서만 사용 가능 -->
-    <div th:with="fisrt=${users[0]}">
-        <p th:text="${fisrt.username}"></p>
-    </div>
-    <!-- 선언한 태그 밖에서는 사용 불가능 -->
-    <!-- <p th:text="${fisrt.username}"></p> -->
+<!-- 지역변수 -->
+<!-- 선언한 태그 내에서만 사용 가능 -->
+<div th:with="fisrt=${users[0]}">
+  <p th:text="${fisrt.username}"></p>
+</div>
+<!-- 선언한 태그 밖에서는 사용 불가능 -->
+<!-- <p th:text="${fisrt.username}"></p> -->
 
 </body>
 </html>

@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
-    <h1>타임리프 기본</h1>
+  <h1>타임리프 기본</h1>
 
-    <!-- 속성값을 th:text="${data}" 주면 내부에 들어옴 -->
-    <div><span th:text="${data}"></span></div>
+  <!-- 속성값을 th:text="${data}" 주면 내부에 들어옴 -->
+  <div><span th:text="${data}"></span></div>
 
-    <!-- 태그 내부에 직접 받아오고 싶을 때 -->
-    <div>[[${data}]]</div>
+  <!-- 태그 내부에 직접 받아오고 싶을 때 -->
+  <div>[[${data}]]</div>
 
-    <div>
-        <!-- 태그 미적용 -->
-        <div><span th:text="${unescapedData}"></span></div>
+  <div>
+    <!-- 태그 미적용 -->
+    <div><span th:text="${unescapedData}"></span></div>
 
-        <!-- 태그 적용 -->
-        <div><span th:utext="${unescapedData}"></span></div>
+    <!-- 태그 적용 -->
+    <div><span th:utext="${unescapedData}"></span></div>
 
-        <!-- 태그 미적용 -->
-        <div><span th:inline="none">[[]] : </span>[[${unescapedData}]]</div>
+    <!-- 태그 미적용 -->
+    <div><span th:inline="none">[[]] : </span>[[${unescapedData}]]</div>
 
-        <!-- 태그 적용 -->
-        <div><span th:inline="none">[()] : </span>[(${unescapedData})]</div>
+    <!-- 태그 적용 -->
+    <div><span th:inline="none">[()] : </span>[(${unescapedData})]</div>
 
-    </div>
+  </div>
 </body>
 </html>
