@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,5 +53,18 @@ public class HomeController {
         model.addAttribute("modelData", "모델데이터");
         session.setAttribute("sessionData", "세션데이터");
         return "/basic/basicobject";
+    }
+
+    @GetMapping("/link")
+    public String link(Model model) {
+        model.addAttribute("name", "hong");
+        model.addAttribute("age", "10");
+        return "/basic/link";
+    }
+
+    @GetMapping("/date")
+    public String date(Model model) {
+        model.addAttribute("localDateTime", LocalDateTime.now());
+        return "/basic/date";
     }
 }

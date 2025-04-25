@@ -7,8 +7,17 @@
 </head>
 <body>
     <h1>타임리프 기본</h1>
+    <!-- 모델 데이터는 그대로 -->
     <div th:text="${modelData}"></div>
     <!-- 세션데이터는 session. 을 붙여줌 -->
     <div th:text="${session.sessionData}"></div>
+
+    <!-- 기본객체 -->
+    <div th:text="${#locale}"></div>
+    <div th:text="${#locale.country}"></div>
+
+    <!-- 주소창에 http://localhost:8081/basicobject?paramData=Value 로 요청 -->
+    <div th:text="${param.paramData}"></div>
+
 </body>
 </html>
