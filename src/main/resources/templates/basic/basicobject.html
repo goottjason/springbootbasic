@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>타임리프 기본</h1>
+    <div th:text="${modelData}"></div>
+    <!-- 세션데이터는 session. 을 붙여줌 -->
+    <div th:text="${session.sessionData}"></div>
+</body>
+</html>
