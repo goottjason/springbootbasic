@@ -10,6 +10,7 @@
     <div th:text="${localDateTime}"></div>
     <div th:text="${#temporals.format(localDateTime, 'yyyy-MM-dd HH:mm:ss')}"></div>
 
+    <!-- 날짜 연습 -->
     <div th:text="${#temporals.day(localDateTime)}"></div>
     <div th:text="${#temporals.month(localDateTime)}"></div>
     <div th:text="${#temporals.monthName(localDateTime)}"></div>
