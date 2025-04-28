@@ -1,4 +1,4 @@
-package com.kjw.bootbasic;
+package com.kjw.bootbasic.controller;
 
 import com.kjw.bootbasic.domain.User;
 import jakarta.servlet.http.HttpSession;

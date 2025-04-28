@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>fragmentMain</title>
+</head>
+<body>
+<h1>fragmentMain</h1>
+<!--div 안에 추가됨-->
+<h2>fragment insert</h2>
+<div th:insert="~{templateex/fragment/footer :: copy}"></div>
+
+<!--div를 대체하여 추가됨-->
+<h2>fragment replace</h2>
+<div th:replace="templateex/fragment/footer :: copy"></div>
+
+<h2>Parameter</h2>
+<div th:replace="~{templateex/fragment/footer :: copyParams ('파라미터1', '파라미터2')}"></div>
+</body>
+</html>
